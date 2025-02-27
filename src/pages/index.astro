@@ -5,11 +5,18 @@ import Layout from "../layouts/Layout.astro";
 import LinkedInIcon from "../Icons/LinkedIn.astro";
 import SocialPill from "../Icons/SocialPill.astro";
 import GithubIcon from "../Icons/Github.astro";
+import Mailicon from "../Icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../Icons/Briefcase.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+ title="Porfolio de Orlando. Desarrollador y Web"
+ description="Soy un desarrollador web apasionado y autodidacta con más de 1 año de experiencia"
+ >
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+     <SectionContainer class= "py-44 pb-24"> 
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
         Hey, soy orlando <a
           href="https://www.linkedin.com/in/orlando-gonzalez-490307348/"
@@ -29,16 +36,28 @@ import GithubIcon from "../Icons/Github.astro";
           >
         </h2>
 
-        <nav class="flex gap-x-2">
+        <nav class="flex gap-x-4 mt-8">
           <SocialPill href="https://www.linkedin.com/in/orlando-gonzalez-490307348/">
             <LinkedInIcon class="w-6 h-6" />
             LinkedIn
           </SocialPill>
-          <SocialPill href="https://www.linkedin.com/in/orlando-gonzalez-490307348/">
+          <SocialPill href="https://github.com/Orlandiny">
             <GithubIcon class="w-6 h-6" />
             GitHub
           </Githubicon>
+          <SocialPill href="https://github.com/Orlandiny">
+            <Mailicon class="w-6 h-6" />
+            orlando.quero77@gmail.com
+          </Githubicon>
         </nav>
-    </section>
+      </SectionContainer>
+ 
+    <SectionContainer id = "experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+           Experiencia Laboral
+      </h2>
+      <Experience/>
+    </SectionContainer>
   </main>
 </Layout>
